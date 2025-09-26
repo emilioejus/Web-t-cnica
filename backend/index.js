@@ -3,15 +3,14 @@ const cors = require("cors");
 
 const app = express();
 const PORT = 5000; // Puedes usar el puerto que quieras
+const videoRoutes = require("./routes/videoRoutes");
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
-// Ruta de ejemplo
-app.get("/api/saludo", (req, res) => {
-  res.json({ mensaje: "Hola desde el backend con Node y Express 🚀" });
-});
+// Rutas
+app.use("/api", videoRoutes);
 
 // Iniciar servidor
 app.listen(PORT, () => {

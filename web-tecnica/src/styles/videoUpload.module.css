@@ -1,0 +1,88 @@
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  background-color: #1f2937; /* gris oscuro */
+  color: #f3f4f6;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+}
+
+.input {
+  display: none;
+}
+
+.uploadButton {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  background-color: #6366f1;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.uploadButton:hover {
+  background-color: #4f46e5;
+}
+
+.preview {
+  margin-top: 1.5rem;
+}
+
+.filename {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+.video {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 0.5rem;
+}
+
+.sendButton {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  background-color: #10b981; /* verde */
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border: none;
+}
+
+.sendButton:hover {
+  background-color: #059669;
+}
+
+.sendButton:disabled {
+  background-color: #6b7280; /* gris */
+  cursor: not-allowed;
+}
+
+.result {
+  margin-top: 2rem;
+  text-align: left;
+  background: #111827;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #f3f4f6;
+}
