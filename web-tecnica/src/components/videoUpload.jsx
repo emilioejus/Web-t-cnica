@@ -70,10 +70,17 @@ function VideoUpload() {
 
       {response && (
         <div className={styles.result}>
+          <h2>📄 Resultado:</h2>
+          <p>{response.message}</p>
+        </div>
+      )}
+
+      {/* {response && (
+        <div className={styles.result}>
           <h2>📄 Respuesta del backend:</h2>
           <pre>{JSON.stringify(response, null, 2)}</pre>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

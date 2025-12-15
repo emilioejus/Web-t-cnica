@@ -8,6 +8,7 @@ const processVideo = async (req, res) => {
   try {
     const videoPath = req.file.path; // Multer ya lo guarda en uploads/
     const framesDir = path.join(__dirname, "..", "frames");
+    console.log("prueba")
 
     if (!fs.existsSync(framesDir)) {
       fs.mkdirSync(framesDir);

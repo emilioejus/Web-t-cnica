@@ -1,6 +1,6 @@
 const express = require("express");
 const multer = require("multer");
-const { processVideo } = require("../controllers/videoController");
+const { processVideo } = require("../controllers/video.controller");
 
 const router = express.Router();
 
