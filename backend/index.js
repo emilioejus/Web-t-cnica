@@ -2,18 +2,29 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-const PORT = 5000; // Puedes usar el puerto que quieras
-const videoRoutes = require("./src/routes/video.routes");
-const routes = require("./src/routes/video.routes");
+const PORT = process.env.PORT || 5000;
 
-// Middleware
-app.use(cors());
+const videoRoutes = require("./src/routes/video.routes");
+
+// Middlewares
+// app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://tu-frontend.netlify.app"
+  ]
+}));
 app.use(express.json());
 
 // Rutas
 app.use("/api", videoRoutes);
 
+// Ruta health (opcional pero recomendada)
+app.get("/", (req, res) => {
+  res.send("Backend Web Técnica activo 🚀");
+});
+
 // Iniciar servidor
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en puerto ${PORT}`);
 });
