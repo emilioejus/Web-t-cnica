@@ -36,7 +36,8 @@ const processVideo = async (req, res) => {
       const framePath = path.join(framesDir, file);
       console.log("🔎 OCR en:", framePath);
 
-      const { data } = await Tesseract.recognize(framePath, "eng"); // o "spa" para español
+      // const { data } = await Tesseract.recognize(framePath, "eng"); // o "eng" for english
+      const { data } = await Tesseract.recognize(framePath, "spa"); // o "spa" para español
       textos.push(data.text.trim());
     }
 
