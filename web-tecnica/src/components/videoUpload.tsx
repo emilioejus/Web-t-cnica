@@ -171,7 +171,7 @@ type ExportOption = "txt" | "excel";
 
 export default function VideoUpload() {
   const [videoFile, setVideoFile] = useState<File | null>(null);
-  const [fps, setFps] = useState<number>(1);
+  const [fps, setFps] = useState<number>(0.2);
   const [exportOptions, setExportOptions] = useState<ExportOption[]>([]);
   const [downloaded, setDownloaded] = useState(false);
 
@@ -279,7 +279,7 @@ export default function VideoUpload() {
 
       <input type="file" accept="video/*" onChange={handleUpload} />
 
-      <div style={{ marginTop: 10 }}>
+      {/* <div style={{ marginTop: 10 }}>
         <label>
           FPS:
           <input
@@ -290,7 +290,7 @@ export default function VideoUpload() {
             onChange={(e) => setFps(Number(e.target.value))}
           />
         </label>
-      </div>
+      </div> */}
 
       <div style={{ marginTop: 15 }}>
         <strong>Formato de descarga:</strong>
